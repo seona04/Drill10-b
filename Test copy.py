@@ -47,8 +47,11 @@ class Ball:
 
         self.ground_y = 55 + self.size / 2
     def update(self):
+        # 바닥에 도착하기 전까지 낙하
+        if self.y > self.ground_y:
+            self.y -= self.speed
 
-
+ 
     def draw(self):
         self.image.draw(self.x, self.y)
         
