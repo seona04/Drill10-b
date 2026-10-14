@@ -47,7 +47,7 @@ class Ball:
 
         self.ground_y = 55 + self.size / 2
     def update(self):
-        
+
         if self.y > self.ground_y:
             self.y -= self.speed
         
@@ -63,6 +63,20 @@ class Ball:
 
 
 def reset_world():
+        global running, grass, world, team
+
+    running = True
+
+    world = []
+
+    grass = Grass()
+    world.append(grass)
+
+    team = [Boy() for _ in range(11)]
+    world += team
+
+    balls = [Ball() for _ in range(20)]
+    world += balls
 
 
 def update_world():
