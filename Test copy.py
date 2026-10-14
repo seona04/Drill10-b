@@ -32,6 +32,20 @@ class Boy:
 
 
 class Ball:
+    def __init__(self):
+        self.size = random.choice([21, 41])
+
+        if self.size == 21:
+            self.image = load_image('ball21x21.png')
+        else:
+            self.image = load_image('ball41x41.png')
+
+        self.x = random.randint(21, 779)
+        self.y = 599
+
+        self.speed = random.uniform(2.0, 8.0)
+
+        self.ground_y = 55 + self.size / 2
 
 
 
