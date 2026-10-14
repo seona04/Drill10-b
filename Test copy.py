@@ -63,10 +63,9 @@ class Ball:
 
 
 def reset_world():
-        global running, grass, world, team
-
+ global running, grass, world, team
+ 
     running = True
-
     world = []
 
     grass = Grass()
