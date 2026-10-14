@@ -46,6 +46,13 @@ class Ball:
         self.speed = random.uniform(2.0, 8.0)
 
         self.ground_y = 55 + self.size / 2
+    def update(self):
+
+
+    def draw(self):
+        self.image.draw(self.x, self.y)
+        
+
 
 
 
